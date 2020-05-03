@@ -1,0 +1,50 @@
+.scene_tag{
+    position: absolute;
+    left:30px;
+    top:0px;
+    font-size:24px;
+    border-color: #78a4f4;
+    background-color: #78a4f4;
+    border:1px solid;
+    height:30px;
+    border-radius:100%;
+    color:#fff;
+    height:56px;
+    line-height: 42px;
+    padding:6px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    display: table-cell;
+}
+.scene_name{
+    font-size: 48px;
+    font-weight:400;
+}
+.article_h1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+.at-article__info{
+    text-align: center;
+}
+.information_tag{
+    background: #6190E8;
+    color:#eee;
+}
+.star{
+    display: flex;
+    flex-direction: row;
+    &_text{
+        font-size: 32px;
+        margin-left:12px;
+        font-weight: 600;
+    }
+}
+.scene_introduction{
+    text-indent: 2em;
+}
+.basic_information_title{
+    font-weight:700;
+    margin-right:15px;
+}

@@ -1,0 +1,37 @@
+@import "~taro-ui/dist/style/components/article.scss";
+@import "~taro-ui/dist/style/components/tag.scss";
+@import "~taro-ui/dist/style/components/rate.scss";
+@import "~taro-ui/dist/style/components/icon.scss";
+.scene_tag{
+    position: absolute;
+    left:30px;
+    top:0px;
+    font-size:24px;
+    border-color: #78a4f4;
+    background-color: #78a4f4;
+    border:1px solid;
+    height:30px;
+    border-radius:100%;
+    color:#fff;
+    height:56px;
+    line-height: 42px;
+    padding:6px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    display: table-cell;
+}
+.scene_name{
+    font-size: 48px;
+    font-weight:400;
+}
+.article_h1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+.at-article__info{
+    text-align: center;
+}
+.star{
+    background: #78a4f4;
+}
