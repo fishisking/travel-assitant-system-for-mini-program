@@ -13,13 +13,6 @@ export default class ItineraryCustomPlaceTab extends Taro.Component{
         addGlobalClass: true
     }
     handleClick(e) {
-        if (this.state.data.length > 0) {
-            Taro.navigateTo({
-                url: '/pages/detail/sceneDetail/hotelDetail?kw=' + this.state.data[this.state.current - 1].destination_name
-            })
-        } else {
-            //对话框
-        }
 
     }
     handlePageChange(obj) {
@@ -28,45 +21,46 @@ export default class ItineraryCustomPlaceTab extends Taro.Component{
         })
     }
     componentDidMount() {
-        //console.log(this.props)
+        console.log(this.props)
         this.setState({
             data: this.props.customPlaceData,
             current: (this.props.customPlaceData.length > 0) ? 1 : 0,
             total: (this.props.customPlaceData.length > 0) ? this.props.customPlaceData.length : 0
         }, () => {
-            //console.log(this.state.data)
+            console.log(this.state.data)
         })
     }
     render(){      
         const data = this.state.data
         const current = this.state.current
         const total = this.state.total
+        const time = `${(data.length > 0 && data[current - 1].destination_date) ? data[current - 1].destination_date : ''} ${(data.length > 0 && data[current - 1].destination_time) ? data[current - 1].destination_time: '无具体时间'}`
         return (
             <View>
                 <AtList>
                     <AtListItem
                         title='目的地'
-                        note='灵隐寺'
+                        note={(data.length > 0 && data[current - 1].destination_name) ? data[current - 1].destination_name : '无'}
                         thumb={require('../../../assets/img/目的地.png')}
                         />
                         <AtListItem
                         title='地点位置'
-                        note='浙江省杭州市西湖区法云弄1号'
+                        note={(data.length > 0 && data[current - 1].destination_address) ? data[current - 1].destination_address : '无'}
                         arrow='right'
                         thumb={require('../../../assets/img/导航.png')}
                         />
                         <AtListItem
                         title='出发时间'
-                        note="10:30(记得带身份证)"
+                        note={time}
                         thumb={require('../../../assets/img/时间.png')}>
                         </AtListItem>
                         <AtListItem
                         title='备注'
-                        note="记得带身份证"
+                        note={(data.length > 0 && data[current - 1].note) ? data[current - 1].note : '无'}
                         thumb={require('../../../assets/img/更多.png')}>
                         </AtListItem>
                         <AtListItem
-                        title='景点信息'
+                        title='自定义地点信息'
                         arrow='right'
                         thumb={require('../../../assets/img/自定义地点.png')}></AtListItem>
                 </AtList>     

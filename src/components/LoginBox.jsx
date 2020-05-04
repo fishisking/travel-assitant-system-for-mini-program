@@ -5,7 +5,7 @@ export default class Index extends Taro.Component {
   constructor() {
     super(...arguments)
     this.state = {
-      account: 100038,
+      account: 100040,
       password: 123456
     }
   }

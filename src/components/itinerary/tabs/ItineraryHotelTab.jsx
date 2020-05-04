@@ -29,7 +29,7 @@ export default class ItineraryHotelTab extends Taro.Component {
         this.setState({
             data: this.props.hotelData.length>0?this.props.hotelData[0]:{},
         }, () => {
-            console.log(this.state.data)
+            //console.log(this.state.data)
         })
     }
     render() {

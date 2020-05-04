@@ -53,12 +53,12 @@ export default class ItineraryTabs extends Taro.Component {
     this.setState({
       data
     },()=>{
-      //console.log(this.state.data)
+      /* console.log(this.state.data) */
     })
     //console.log(this.state.data)
   }
   componentWillMount() {
-    var date = (new Date()).format("yyyy-M-dd") 
+    var date = (new Date()).format("yyyy-MM-dd") 
     const user_id = this.props.user_id
     Taro.request({
       url: 'http://192.168.192.194:8088/keshe1/api/getItineraryByDate',
